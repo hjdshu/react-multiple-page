@@ -1,24 +1,27 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import logo from './logo.svg';
 import './App.less';
 
+import C1 from './components/c1'
+import C2 from './components/c2'
+import reduce, { ThemeContext } from './reduce';
+
 function App() {
+
+  const [state, dispatch] = useReducer(reduce, { count: 2 })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <ThemeContext.Provider value={{state, dispatch}}>
+        <C1></C1>
+        <C2></C2>
+      </ThemeContext.Provider>
+
+      <button className='btn' onClick={() => {
+        dispatch('add')
+      }} style={{ 'marginTop': '20px' }}>{state.count}</button>
+
     </div>
   );
 }
