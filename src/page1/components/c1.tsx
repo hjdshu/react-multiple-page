@@ -12,7 +12,7 @@ export default function () {
       <br/>
       <button onClick={()=>{
         dispatch('add')
-      }}>{state.count}</button>
+      }}>add</button>
     </div>
   )
 }
