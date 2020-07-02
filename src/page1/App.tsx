@@ -20,7 +20,7 @@ function App() {
 
       <button className='btn' onClick={() => {
         dispatch('add')
-      }} style={{ 'marginTop': '20px' }}>add</button>
+      }} style={{ 'marginTop': '20px' }}>App Add</button>
 
     </div>
   );

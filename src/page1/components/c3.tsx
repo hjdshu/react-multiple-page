@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../reduce';
-import C3 from './c3';
 
 export default function () {
 
@@ -8,13 +7,9 @@ export default function () {
 
   return (
     <div>
-      <h2>this is c2</h2>
+      <h2>this is c3</h2>
       count: {state.count}
       <br/>
-      <button onClick={()=>{
-        dispatch('reduce')
-      }}>reduce</button>
-      <C3></C3>
     </div>
   )
 }
