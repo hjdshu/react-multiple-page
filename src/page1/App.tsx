@@ -4,11 +4,11 @@ import './App.less';
 
 import C1 from './components/c1'
 import C2 from './components/c2'
-import reduce, { ThemeContext } from './reduce';
+import ThemeContext, { reduce, stateInit } from './reduce';
 
 function App() {
 
-  const [state, dispatch] = useReducer(reduce, { count: 2 })
+  const [state, dispatch] = useReducer(reduce, stateInit)
 
   return (
     <div className="App">

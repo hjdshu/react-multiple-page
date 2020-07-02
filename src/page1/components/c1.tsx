@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from '../reduce';
+import ThemeContext from '../reduce';
 
 export default function () {
 
