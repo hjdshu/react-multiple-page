@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-// import constate from "constate";
 import C1 from './components/c1';
 
 import { CounterProvider, useCounterContext } from './reduce'
