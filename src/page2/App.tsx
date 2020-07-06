@@ -8,15 +8,20 @@ function App() {
 
   const Div = function () {
     const { count, increment } = useCounterContext()
+    const incrementFunc = () => {
+      increment(2)
+    }
     return (
-    <div onClick={increment}>count: {count}</div>
+    <button onClick={incrementFunc}>count: {count}</button>
     )
   }
 
   return (
     <CounterProvider>
-      <Div></Div>
-      <C1></C1>
+      <div className='App'>
+        <Div></Div>
+        <C1></C1>
+      </div>
     </CounterProvider>
   );
 }

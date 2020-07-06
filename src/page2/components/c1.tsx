@@ -4,6 +4,6 @@ export default function () {
   
   const { count } = useCounterContext()
   return (
-    <div>{count}</div>
+    <div>c1's count: {count}</div>
   )
 }
