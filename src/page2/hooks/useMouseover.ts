@@ -15,5 +15,5 @@ export default function useGetMousemove () {
       window.removeEventListener('mousemove', func, false)
     }
   }, [])
-  return {x, refX: refX.current}
+  return {x: 0, refX: refX.current}
 }
