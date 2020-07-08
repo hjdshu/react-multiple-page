@@ -14,7 +14,7 @@ export default function () {
       <button onClick={()=>{
         dispatch('reduce')
       }}>reduce</button>
-      <C3></C3>
+      <C3 count={state.count}></C3>
     </div>
   )
 }
