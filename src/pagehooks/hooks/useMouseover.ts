@@ -5,7 +5,7 @@ export default function useGetMousemove () {
 
   useEffect(() => {
     const func = function (e:any) {
-      console.log('move', e.clientX)
+      // console.log('move', e.clientX)
       setX((x) => (x+1))
     }
     window.addEventListener('mousemove', func, false)
