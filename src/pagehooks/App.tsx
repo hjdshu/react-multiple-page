@@ -1,32 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import './App.css';
 import Child from './components/child';
 
 import useGetMousemove from './hooks/useMouseover'
 import useMounted from './hooks/useMounted'
-import useCountDown from './hooks/useCountDown'
+import useLoginData from './hooks/useLoginData'
 
 function App() {
 
-  const {x} = useGetMousemove()
+  const {x, clientX} = useGetMousemove()
+  const {isLogin, userName} = useLoginData()
 
   useMounted(() => {
     console.log('23333')
   })
 
-  const { isActive, countText, startCountDown, clearCount } = useCountDown('获取验证码', 60, 1000)
 
   return (
     <div className='App'>
       <div>x: {x}</div> 
+      <div>clientX: {clientX}</div> 
 
       <button>this is a line ----------------</button>
 
       <Child/>
 
-      <button onClick={startCountDown}>倒计时</button>
-      <button onClick={clearCount}>clear倒计时</button>
-      {countText}
+      <div>登录？{userName || '还没有登录'}</div>
+
     </div>
   );
 }
