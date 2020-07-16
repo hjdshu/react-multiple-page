@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useCounterContext } from '../reduce'
+import { useCounterContext } from '../store'
 export default function () {
   const { count, increment } = useCounterContext()
 
