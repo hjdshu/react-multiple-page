@@ -5,7 +5,7 @@ export default function useGetMousemove () {
   const [clientX, setClientX] = useState(0)
 
   useEffect(() => {
-    const func = function (e: MouseEvent) {
+    const func = function (e:MouseEvent) {
       setX((x) => (x+1))
       setClientX(e.clientX)
     }
