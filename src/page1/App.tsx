@@ -19,6 +19,11 @@ function App() {
         <C2></C2>
       </ThemeContext.Provider>
 
+      <br/>
+      <a href="./page2">page2 constate实践应用</a>
+      <br/>
+      <a href="./pagehooks">hooks实践应用</a>
+
     </div>
   );
 }

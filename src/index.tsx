@@ -3,9 +3,6 @@ import ReactDOM from 'react-dom';
 
 const App = (
   <div>
-    <a href="index.html">loginlock</a>
-    <br/>
-    <a href="index2.html">poptips</a>
   </div>
 )
 
