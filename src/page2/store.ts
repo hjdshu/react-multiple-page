@@ -5,7 +5,6 @@ export function useCounter() {
   // init state
   const [count, setCount] = useState(4);
 
-  const bsdas = useRef<Number>(1)
   // action ~~ 
   const add = (number?: number) => {
     setCount(prevCount => prevCount + (number || 1));
