@@ -7,12 +7,12 @@ const multipleEntry = require('react-app-rewire-multiple-entry')([
   {
     entry: 'src/page2/index.tsx',
     template: 'public/index.html',
-    outPath: '/page2'
+    outPath: '/page2.html'
   },
   {
     entry: 'src/pagehooks/index.tsx',
     template: 'public/index.html',
-    outPath: '/pagehooks'
+    outPath: '/pagehooks.html'
   },
 ]);
 
